@@ -1,0 +1,73 @@
+# Project: BTL
+# Makefile created by Dev-C++ 5.11
+
+CPP      = g++.exe
+CC       = gcc.exe
+WINDRES  = windres.exe
+OBJ      = Main.o List.o Node.o ThemSach.o KT_NhapSach.o InSach_List.o SuaSach.o TimSach.o XoaSach.o SapXepSach.o DocFile.o SaveFile.o KTListTrong.o Menu.o Chon.o Do_Toc_Do.o
+LINKOBJ  = Main.o List.o Node.o ThemSach.o KT_NhapSach.o InSach_List.o SuaSach.o TimSach.o XoaSach.o SapXepSach.o DocFile.o SaveFile.o KTListTrong.o Menu.o Chon.o Do_Toc_Do.o
+LIBS     = -L"C:/MinGW/lib" -L"C:/MinGW/mingw32/lib" -static-libstdc++ -static-libgcc
+INCS     = -I"C:/MinGW/include" -I"C:/MinGW/lib/gcc/mingw32/9.2.0/include"
+CXXINCS  = -I"C:/MinGW/include" -I"C:/MinGW/lib/gcc/mingw32/9.2.0/include" -I"C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++"
+BIN      = BTL.exe
+CXXFLAGS = $(CXXINCS) 
+CFLAGS   = $(INCS) 
+RM       = rm.exe -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before $(BIN) all-after
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CPP) $(LINKOBJ) -o $(BIN) $(LIBS)
+
+Main.o: Main.cpp
+	$(CPP) -c Main.cpp -o Main.o $(CXXFLAGS)
+
+List.o: List.cpp
+	$(CPP) -c List.cpp -o List.o $(CXXFLAGS)
+
+Node.o: Node.cpp
+	$(CPP) -c Node.cpp -o Node.o $(CXXFLAGS)
+
+ThemSach.o: ThemSach.cpp
+	$(CPP) -c ThemSach.cpp -o ThemSach.o $(CXXFLAGS)
+
+KT_NhapSach.o: KT_NhapSach.cpp
+	$(CPP) -c KT_NhapSach.cpp -o KT_NhapSach.o $(CXXFLAGS)
+
+InSach_List.o: InSach_List.cpp
+	$(CPP) -c InSach_List.cpp -o InSach_List.o $(CXXFLAGS)
+
+SuaSach.o: SuaSach.cpp
+	$(CPP) -c SuaSach.cpp -o SuaSach.o $(CXXFLAGS)
+
+TimSach.o: TimSach.cpp
+	$(CPP) -c TimSach.cpp -o TimSach.o $(CXXFLAGS)
+
+XoaSach.o: XoaSach.cpp
+	$(CPP) -c XoaSach.cpp -o XoaSach.o $(CXXFLAGS)
+
+SapXepSach.o: SapXepSach.cpp
+	$(CPP) -c SapXepSach.cpp -o SapXepSach.o $(CXXFLAGS)
+
+DocFile.o: DocFile.cpp
+	$(CPP) -c DocFile.cpp -o DocFile.o $(CXXFLAGS)
+
+SaveFile.o: SaveFile.cpp
+	$(CPP) -c SaveFile.cpp -o SaveFile.o $(CXXFLAGS)
+
+KTListTrong.o: KTListTrong.cpp
+	$(CPP) -c KTListTrong.cpp -o KTListTrong.o $(CXXFLAGS)
+
+Menu.o: Menu.cpp
+	$(CPP) -c Menu.cpp -o Menu.o $(CXXFLAGS)
+
+Chon.o: Chon.cpp
+	$(CPP) -c Chon.cpp -o Chon.o $(CXXFLAGS)
+
+Do_Toc_Do.o: Do_Toc_Do.cpp
+	$(CPP) -c Do_Toc_Do.cpp -o Do_Toc_Do.o $(CXXFLAGS)
