@@ -1,0 +1,79 @@
+# Project: BTL
+# Makefile created by Dev-C++ 5.11
+
+CPP      = g++.exe
+CC       = gcc.exe
+WINDRES  = windres.exe
+OBJ      = Main.o TaoList.o DocFile.o ThemSach_List.o Chon.o Menu.o KiemTraList.o DemDanhSach.o ThemSach.o NhapThongTinSach.o KiemTraMaSach.o InList_Sach.o TimSach.o SuaSach.o XoaSach.o SapXep.o SaveFile.o ListTest.o
+LINKOBJ  = Main.o TaoList.o DocFile.o ThemSach_List.o Chon.o Menu.o KiemTraList.o DemDanhSach.o ThemSach.o NhapThongTinSach.o KiemTraMaSach.o InList_Sach.o TimSach.o SuaSach.o XoaSach.o SapXep.o SaveFile.o ListTest.o
+LIBS     = -L"C:/MinGW/lib" -L"C:/MinGW/mingw32/lib" -static-libstdc++ -static-libgcc
+INCS     = -I"C:/MinGW/include" -I"C:/MinGW/lib/gcc/mingw32/9.2.0/include"
+CXXINCS  = -I"C:/MinGW/include" -I"C:/MinGW/lib/gcc/mingw32/9.2.0/include" -I"C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++"
+BIN      = BTL.exe
+CXXFLAGS = $(CXXINCS) 
+CFLAGS   = $(INCS) 
+RM       = rm.exe -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before $(BIN) all-after
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CPP) $(LINKOBJ) -o $(BIN) $(LIBS)
+
+Main.o: Main.cpp
+	$(CPP) -c Main.cpp -o Main.o $(CXXFLAGS)
+
+TaoList.o: TaoList.cpp
+	$(CPP) -c TaoList.cpp -o TaoList.o $(CXXFLAGS)
+
+DocFile.o: DocFile.cpp
+	$(CPP) -c DocFile.cpp -o DocFile.o $(CXXFLAGS)
+
+ThemSach_List.o: ThemSach_List.cpp
+	$(CPP) -c ThemSach_List.cpp -o ThemSach_List.o $(CXXFLAGS)
+
+Chon.o: Chon.cpp
+	$(CPP) -c Chon.cpp -o Chon.o $(CXXFLAGS)
+
+Menu.o: Menu.cpp
+	$(CPP) -c Menu.cpp -o Menu.o $(CXXFLAGS)
+
+KiemTraList.o: KiemTraList.cpp
+	$(CPP) -c KiemTraList.cpp -o KiemTraList.o $(CXXFLAGS)
+
+DemDanhSach.o: DemDanhSach.cpp
+	$(CPP) -c DemDanhSach.cpp -o DemDanhSach.o $(CXXFLAGS)
+
+ThemSach.o: ThemSach.cpp
+	$(CPP) -c ThemSach.cpp -o ThemSach.o $(CXXFLAGS)
+
+NhapThongTinSach.o: NhapThongTinSach.cpp
+	$(CPP) -c NhapThongTinSach.cpp -o NhapThongTinSach.o $(CXXFLAGS)
+
+KiemTraMaSach.o: KiemTraMaSach.cpp
+	$(CPP) -c KiemTraMaSach.cpp -o KiemTraMaSach.o $(CXXFLAGS)
+
+InList_Sach.o: InList_Sach.cpp
+	$(CPP) -c InList_Sach.cpp -o InList_Sach.o $(CXXFLAGS)
+
+TimSach.o: TimSach.cpp
+	$(CPP) -c TimSach.cpp -o TimSach.o $(CXXFLAGS)
+
+SuaSach.o: SuaSach.cpp
+	$(CPP) -c SuaSach.cpp -o SuaSach.o $(CXXFLAGS)
+
+XoaSach.o: XoaSach.cpp
+	$(CPP) -c XoaSach.cpp -o XoaSach.o $(CXXFLAGS)
+
+SapXep.o: SapXep.cpp
+	$(CPP) -c SapXep.cpp -o SapXep.o $(CXXFLAGS)
+
+SaveFile.o: SaveFile.cpp
+	$(CPP) -c SaveFile.cpp -o SaveFile.o $(CXXFLAGS)
+
+ListTest.o: ListTest.cpp
+	$(CPP) -c ListTest.cpp -o ListTest.o $(CXXFLAGS)
